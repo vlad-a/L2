@@ -1,52 +1,25 @@
 $(document).ready(function () {
-  const countDownDate = new Date("June 30, 2024 15:37:00").getTime(); // Обновленная дата без секунд
+  $(".rating-info-tabs-top__item")
+    .click(function () {
+      $(".rating-info-tabs-top__item")
+        .removeClass("active")
+        .eq($(this).index())
+        .addClass("active");
+      $(".rating-info-tabs-content__item").hide().eq($(this).index()).fadeIn();
+    })
+    .eq(0)
+    .addClass("active");
+  var endDate = new Date("2024-07-05T23:59:59").getTime();
 
-  if ($(".countdown").length > 0) {
-    const countdown = $(".countdown");
-    const dayscontainer = countdown.find(".js-days span");
-    const hourscontainer = countdown.find(".js-hours span");
-    const minutescontainer = countdown.find(".js-minutes span");
-
-    const startCountdown = () => {
-      const timer = setInterval(function () {
-        // Get today's date and time
-        let now = new Date().getTime();
-
-        // Find the distance between now and the count down date
-        let distance = countDownDate - now;
-
-        if (distance < 0) {
-          countdown.remove();
-          clearInterval(timer);
-        }
-
-        // Time calculations for days, hours, minutes
-        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        let hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-        // Function to add leading zero
-        const addLeadingZero = (num) => (num < 10 ? `0${num}` : num);
-
-        // Display the result with leading zero if needed
-        dayscontainer.text(addLeadingZero(days));
-        hourscontainer.text(addLeadingZero(hours));
-        minutescontainer.text(addLeadingZero(minutes));
-      }, 1000);
-    };
-
-    startCountdown();
-  }
-
-  $(".preview__slider").slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    centerMode: true,
+  $(".preview__slider").owlCarousel({
+    loop: true,
+    center: true,
+    items: 1,
     dots: true,
+    nav: true,
+    smartSpeed: 300,
   });
+
   $(".header-left__theme").click(function () {
     $(this).toggleClass("active");
   });
@@ -69,18 +42,7 @@ $(document).ready(function () {
       );
     }
   });
-  $(document).click(function (event) {
-    // Проверяем, был ли клик вне элементов .header-right__item--lang и .header-right__item--username
-    if (!$(event.target).closest(".servers-top__search").length) {
-      // Удаляем класс active у обоих элементов
-      $(".servers-top__search").removeClass("active");
-    }
-  });
-  $(".servers-top__search").click(function (event) {
-    event.stopPropagation();
-    // Добавляем класс active к .header-right__item--lang и удаляем у .header-right__item--username
-    $(this).addClass("active");
-  });
+
   $(".servers-tabs-click__item")
     .click(function () {
       $(".servers-tabs-click__item")
@@ -116,5 +78,13 @@ $(document).ready(function () {
     // Добавляем класс active к .header-right__item--username и удаляем у .header-right__item--lang
     $(this).toggleClass("active");
     $(".header__right, .header__nav").toggleClass("active");
+  }); // Инициализация таймера
+  $("#countdown").countdown(endDate, function (event) {
+    $(this).find(".days").html(event.strftime("%D"));
+    $(this).find(".days-label").html(" дня ");
+    $(this).find(".hours").html(event.strftime("%H"));
+    $(this).find(".hours-label").html(" часа ");
+    $(this).find(".minutes").html(event.strftime("%M"));
+    $(this).find(".minutes-label").html(" минут");
   });
 });

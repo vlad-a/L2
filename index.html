@@ -81,38 +81,44 @@
           <div class="preview__slider">
             <!-- item -->
             <div class="preview-slider__item">
-              <div class="preview-slider-item--back">
-                <img src="img/preview-item-1.jpg" alt="preview" />
-              </div>
-              <div class="preview-slider-item__content">
-                <div class="preview-slider-item--text">
-                  Получайте свежие анонсы прямо на ваше устройство первыми!
+              <div class="preview-slider-item__inner">
+                <div class="preview-slider-item--back">
+                  <img src="img/preview-item-1.jpg" alt="preview" />
                 </div>
-                <a href="#" class="preview-slider-item--btn">Подписаться</a>
+                <div class="preview-slider-item__content">
+                  <div class="preview-slider-item--text">
+                    Получайте свежие анонсы прямо на ваше устройство первыми!
+                  </div>
+                  <a href="#" class="preview-slider-item--btn">Подписаться</a>
+                </div>
               </div>
             </div>
             <!-- item -->
             <div class="preview-slider__item">
-              <div class="preview-slider-item--back">
-                <img src="img/preview-item-3.jpg" alt="preview" />
-              </div>
-              <div class="preview-slider-item__content">
-                <div class="preview-slider-item--text">
-                  Получайте свежие анонсы прямо на ваше устройство первыми!
+              <div class="preview-slider-item__inner">
+                <div class="preview-slider-item--back">
+                  <img src="img/preview-item-3.jpg" alt="preview" />
                 </div>
-                <a href="#" class="preview-slider-item--btn">Подписаться</a>
+                <div class="preview-slider-item__content">
+                  <div class="preview-slider-item--text">
+                    Получайте свежие анонсы прямо на ваше устройство первыми!
+                  </div>
+                  <a href="#" class="preview-slider-item--btn">Подписаться</a>
+                </div>
               </div>
             </div>
             <!-- item -->
             <div class="preview-slider__item">
-              <div class="preview-slider-item--back">
-                <img src="img/preview-item-2.jpg" alt="preview" />
-              </div>
-              <div class="preview-slider-item__content">
-                <div class="preview-slider-item--text">
-                  Получайте свежие анонсы прямо на ваше устройство первыми!
+              <div class="preview-slider-item__inner">
+                <div class="preview-slider-item--back">
+                  <img src="img/preview-item-2.jpg" alt="preview" />
                 </div>
-                <a href="#" class="preview-slider-item--btn">Подписаться</a>
+                <div class="preview-slider-item__content">
+                  <div class="preview-slider-item--text">
+                    Получайте свежие анонсы прямо на ваше устройство первыми!
+                  </div>
+                  <a href="#" class="preview-slider-item--btn">Подписаться</a>
+                </div>
               </div>
             </div>
           </div>
@@ -345,24 +351,24 @@
               </div>
             </div>
             <div class="server-big__right">
-              <div class="countdown">
+              <div class="server-big-right__countdown">
                 <div class="server-big__right--text">До открытия осталось</div>
-                <ul>
-                  <li class="countdown__days js-days countdown-item-settings">
-                    <span></span>
-                    дня
-                  </li>
+                <div id="countdown">
+                  <div class="coundown__item">
+                    <div class="days"></div>
+                    <div class="days-label"></div>
+                  </div>
                   :
-                  <li class="countdown__hours js-hours countdown-item-settings">
-                    <span></span>часа
-                  </li>
+                  <div class="coundown__item">
+                    <div class="hours"></div>
+                    <div class="hours-label"></div>
+                  </div>
                   :
-                  <li
-                    class="countdown__minutes js-minutes countdown-item-settings"
-                  >
-                    <span></span>минут
-                  </li>
-                </ul>
+                  <div class="coundown__item">
+                    <div class="minutes"></div>
+                    <div class="minutes-label"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -3147,7 +3153,8 @@
     <!-- jquery -->
     <!-- scripts -->
     <script src="js/jquery.js"></script>
-    <script src="js/slick.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="https://cdn.rawgit.com/hilios/jQuery.countdown/2.2.0/dist/jquery.countdown.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
