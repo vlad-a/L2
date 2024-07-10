@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <!-- styles -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="popups">
+      <div class="popup popup-project active">
+        <div class="popup__back"></div>
+        <div class="popup-content">
+          <div class="popup-close">
+            <img src="img/popup-close.svg" alt="close" />
+          </div>
+          <div class="popup__title">Add server</div>
+          <form action="#" method="#">
+            <div class="popup-form__top">
+              <div class="popup__dropdown">
+                <div class="popup-dropdown__main">
+                  <div class="popup-dropdown-main__country">Game</div>
+                  <div class="popup-dropdown-main__angle">
+                    <img src="img/angle-down-popup.svg" alt="angle" />
+                  </div>
+                </div>
+                <div class="popup-dropdown__choise">
+                  <div class="popup-dropdown-choise__item">Game 1</div>
+                  <div class="popup-dropdown-choise__item">Game 2</div>
+                </div>
+              </div>
+              <input
+                type="text"
+                class="popup-field"
+                name="domain"
+                placeholder="Domain"
+              /><input
+                type="text"
+                class="popup-field"
+                name="url"
+                placeholder="Url"
+              /><input
+                type="text"
+                class="popup-field"
+                name="project-name"
+                placeholder="Project name"
+              />
+              <div class="textarea-box">
+                <textarea
+                  name="description"
+                  class="popup-textarea"
+                  placeholder="Description"
+                  maxlength="300"
+                ></textarea>
+              </div>
+              <div class="textarea-box">
+                <textarea
+                  name="bonus-text"
+                  class="popup-textarea"
+                  placeholder="Bonus text"
+                  maxlength="300"
+                ></textarea>
+              </div>
+
+              <div class="popup-file">
+                <input type="file" name="file" />
+                <div class="popup-text">
+                  <div class="popup-text__top">Drag and drop</div>
+                  <div class="popup-text__bottom">Click to change file</div>
+                </div>
+              </div>
+            </div>
+
+            <button class="popup-save popup-add">Add server</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="container-big">
+        <div class="header__wrapper d-flex">
+          <!-- left -->
+          <div class="header__left d-flex">
+            <a href="#" class="header-left__logo">
+              <span class="text-gradient">MMO</span>ANONS
+            </a>
+            <div class="header-left__theme d-flex">
+              <div class="header-left-theme__light"></div>
+              <div class="header-left-theme__dark"></div>
+            </div>
+            <nav class="header__nav">
+              <ul class="d-flex">
+                <li><a href="#">Реклама</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- right -->
+          <div class="header__right">
+            <a
+              href="#"
+              class="header-right__item header-right-item-help d-flex"
+            >
+              <div class="header-right-item-help__icon"></div>
+              <div class="header-right-item-help__text">Помощь</div>
+            </a>
+            <div class="header-right__item header-right__item--lang">
+              <div class="header-right-item__top">RU</div>
+              <div class="header-right-item__dropdown">
+                <!-- item -->
+                <div class="header-right-item-dropdown__item">EN</div>
+                <!-- item -->
+                <div class="header-right-item-dropdown__item">EN</div>
+              </div>
+            </div>
+            <div class="header-right__item header-right__item--username">
+              <div class="header-right__item--username__top d-flex">
+                <div class="header-right__item--username-icon">
+                  <img src="img/avatar.png" alt="avatar" />
+                </div>
+                <div class="header-right__item--username-name">Username</div>
+                <div class="header-right__item--username-angle"></div>
+              </div>
+
+              <div class="header-right-item-username__dropdown">
+                <div class="header-right-item-username-d__item">Профиль</div>
+                <div class="header-right-item-username-d__item">Профиль</div>
+                <div class="header-right-item-username-d__item">Профиль</div>
+              </div>
+            </div>
+            <a href="#" class="header-right-item__server d-flex">
+              <div class="header-right-item-server__icon"></div>
+              <div class="header-right-item-server__text">Добавить сервер</div>
+            </a>
+          </div>
+          <div class="header__burger d-flex">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="profile">
+      <div class="container">
+        <div class="profile__wrapper">
+          <div class="profile-wrapper-box">
+            <h1 class="profile-title">Account</h1>
+            <div class="profile-content d-flex">
+              <div class="profile-content-left">
+                <div class="profile-content-left__nav">
+                  <div class="profile-content-left-nav__item">My Profile</div>
+                  <a href="#" class="profile-content-left-nav__item"
+                    >Security</a
+                  >
+                  <a href="#" class="profile-content-left-nav__item active"
+                    >Projects</a
+                  >
+                  <a href="#" class="profile-content-left-nav__item"
+                    >Advertising</a
+                  >
+                </div>
+                <div class="profile-content-left__delete">Delete Account</div>
+              </div>
+              <div class="profile-content-right">
+                <div class="profile-content-right__item">
+                  <div class="pcri-profile">
+                    <div class="pcri-title">Projects</div>
+                    <div class="servers-top__search">
+                      <input type="text" placeholder="Поиск" />
+                      <div class="servers-top__icon"></div>
+                    </div>
+                    <!-- item -->
+                    <div class="pcri-profile__account pcri-back">
+                      <div class="pcri-profile-personal__title">Account</div>
+                      <div class="profile-project">
+                        <!-- project -->
+                        <div class="profile-project">
+                          <!-- top -->
+                          <div class="profile-project__top">
+                            <div class="profile-project-top__left">
+                              <div class="pptl__top">
+                                <div class="profile-project-top-left__name">
+                                  SuperServer
+                                </div>
+                                <div
+                                  class="profile-project-top-left__moderation"
+                                >
+                                  On moderation
+                                </div>
+                              </div>
+                              <div class="pptl__name">Mu Online</div>
+                            </div>
+                            <div class="profile-project-top__right">
+                              <div class="rlbii-bottom__rating">
+                                <div class="rlbii-bottom-rating__num">12</div>
+                                <div class="rlbii-bottom-rating__stars">
+                                  <div class="rlbii-bottom-rating--star">
+                                    <img src="img/star-o.svg" alt="svg" />
+                                  </div>
+                                  <div class="rlbii-bottom-rating--star">
+                                    <img src="img/star-o.svg" alt="svg" />
+                                  </div>
+                                  <div class="rlbii-bottom-rating--star">
+                                    <img src="img/star-o.svg" alt="svg" />
+                                  </div>
+                                  <div class="rlbii-bottom-rating--star">
+                                    <img src="img/star-b.svg" alt="svg" />
+                                  </div>
+                                  <div class="rlbii-bottom-rating--star">
+                                    <img src="img/star-b.svg" alt="svg" />
+                                  </div>
+                                </div>
+                              </div>
+                              <a href="#" class="pptr__more">
+                                <span></span><span></span><span></span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="profile-project-bottom">
+                            <div class="pcri-profile-personal__list d-flex">
+                              <div class="pcri-profile-personal__list-item">
+                                <div class="pcri-ppli__top">Start</div>
+                                <div class="pcri-ppli__info">NaN</div>
+                              </div>
+                              <div class="pcri-profile-personal__list-item">
+                                <div class="pcri-ppli__top">Rates</div>
+                                <div class="pcri-ppli__info">NaN</div>
+                              </div>
+                              <div class="pcri-profile-personal__list-item">
+                                <div class="pcri-ppli__top">Version</div>
+                                <div class="pcri-ppli__info">NaN</div>
+                              </div>
+                              <div class="pcri-profile-personal__list-item">
+                                <div class="pcri-ppli__top">Status</div>
+                                <div class="pcri-ppli__info">NaN</div>
+                              </div>
+                              <div class="pcri-profile-personal__list-item">
+                                <div class="pcri-ppli__top">Active</div>
+                                <div class="pcri-ppli__info">NaN</div>
+                              </div>
+                              <div class="pcri-profile-personal__list-item">
+                                <div class="pcri-ppli__top">Actions</div>
+                                <div class="pcri-ppli__info">NaN</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prcip-project--add">
+                      <div class="prcip-project-add__plus"></div>
+                      <div class="prcip-project-add__text">Add server</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- jquery -->
+    <!-- scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery-countdown.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

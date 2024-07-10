@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <!-- styles -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="popups">
+      <div class="popup popup-project active">
+        <div class="popup__back"></div>
+        <div class="popup-content">
+          <div class="popup-close">
+            <img src="img/popup-close.svg" alt="close" />
+          </div>
+          <div class="popup__title">Replenish</div>
+          <form action="#" method="#">
+            <div class="popup-form__top">
+              <div class="popup__dropdown">
+                <div class="popup-dropdown__main">
+                  <div class="popup-dropdown-main__country">
+                    PayPal (Commission 5%)
+                  </div>
+                  <div class="popup-dropdown-main__angle">
+                    <img src="img/angle-down-popup.svg" alt="angle" />
+                  </div>
+                </div>
+                <div class="popup-dropdown__choise">
+                  <div class="popup-dropdown-choise__item">
+                    PayPal (Commission 15%)
+                  </div>
+                  <div class="popup-dropdown-choise__item">
+                    PayPal (Commission 215%)
+                  </div>
+                </div>
+              </div>
+              <input
+                type="text"
+                class="popup-field"
+                name="amount"
+                placeholder="50"
+              />
+              <input
+                type="text"
+                class="popup-field"
+                name="promocode"
+                placeholder="Promocode"
+              />
+              <div class="form-group">
+                <input type="checkbox" id="agreement" />
+                <label for="agreement">
+                  I agree to the <a href="#">Terms and Conditions</a> and<a
+                    href="#"
+                  >
+                    Privacy Policy</a
+                  >
+                </label>
+              </div>
+            </div>
+
+            <button class="popup-save popup-add">Add server</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="container-big">
+        <div class="header__wrapper d-flex">
+          <!-- left -->
+          <div class="header__left d-flex">
+            <a href="#" class="header-left__logo">
+              <span class="text-gradient">MMO</span>ANONS
+            </a>
+            <div class="header-left__theme d-flex">
+              <div class="header-left-theme__light"></div>
+              <div class="header-left-theme__dark"></div>
+            </div>
+            <nav class="header__nav">
+              <ul class="d-flex">
+                <li><a href="#">Реклама</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- right -->
+          <div class="header__right">
+            <a
+              href="#"
+              class="header-right__item header-right-item-help d-flex"
+            >
+              <div class="header-right-item-help__icon"></div>
+              <div class="header-right-item-help__text">Помощь</div>
+            </a>
+            <div class="header-right__item header-right__item--lang">
+              <div class="header-right-item__top">RU</div>
+              <div class="header-right-item__dropdown">
+                <!-- item -->
+                <div class="header-right-item-dropdown__item">EN</div>
+                <!-- item -->
+                <div class="header-right-item-dropdown__item">EN</div>
+              </div>
+            </div>
+            <div class="header-right__item header-right__item--username">
+              <div class="header-right__item--username__top d-flex">
+                <div class="header-right__item--username-icon">
+                  <img src="img/avatar.png" alt="avatar" />
+                </div>
+                <div class="header-right__item--username-name">Username</div>
+                <div class="header-right__item--username-angle"></div>
+              </div>
+
+              <div class="header-right-item-username__dropdown">
+                <div class="header-right-item-username-d__item">Профиль</div>
+                <div class="header-right-item-username-d__item">Профиль</div>
+                <div class="header-right-item-username-d__item">Профиль</div>
+              </div>
+            </div>
+            <a href="#" class="header-right-item__server d-flex">
+              <div class="header-right-item-server__icon"></div>
+              <div class="header-right-item-server__text">Добавить сервер</div>
+            </a>
+          </div>
+          <div class="header__burger d-flex">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="profile">
+      <div class="container">
+        <div class="profile__wrapper">
+          <div class="profile-wrapper-box">
+            <h1 class="profile-title">Account</h1>
+            <div class="profile-content d-flex">
+              <div class="profile-content-left">
+                <div class="profile-content-left__nav">
+                  <div class="profile-content-left-nav__item">My Profile</div>
+                  <a href="#" class="profile-content-left-nav__item"
+                    >Security</a
+                  >
+                  <a href="#" class="profile-content-left-nav__item"
+                    >Projects</a
+                  >
+                  <a href="#" class="profile-content-left-nav__item active"
+                    >Advertising</a
+                  >
+                </div>
+                <div class="profile-content-left__delete">Delete Account</div>
+              </div>
+              <div class="profile-content-right">
+                <div class="profile-content-right__item">
+                  <div class="pcri-profile">
+                    <div class="pcri-title">Wallet</div>
+
+                    <!-- item -->
+                    <div class="pcri-profile__account pcri-back">
+                      <div class="wallet-free"><span>-10%</span>Скидка</div>
+                      <div class="wallet-text">Balance</div>
+                      <div class="wallet-balance">$ 18,000</div>
+                      <div class="prcip-project--add wallet-prcip-project--add">
+                        <div class="prcip-project-add__plus"></div>
+                        <div class="prcip-project-add__text">Replenish</div>
+                      </div>
+                    </div>
+
+                    <div class="pcri-title">Advertising</div>
+                    <div class="pcri-profile__account pcri-back">
+                      <div class="pcri-profile-personal__title">Service</div>
+                      <div class="wallet-service">
+                        <!-- item -->
+                        <div class="wallet-service__item">
+                          <div class="wallet-service-item__title">Base</div>
+                          <div class="wallet-service-item__list">
+                            <!-- item -->
+                            <div class="wallet-service-item-list__point">
+                              <div
+                                class="wallet-service-item-list-point__icon"
+                              ></div>
+                              <div class="wallet-service-item-list-point__text">
+                                Item 1
+                              </div>
+                            </div>
+                            <!-- item -->
+                            <div class="wallet-service-item-list__point">
+                              <div
+                                class="wallet-service-item-list-point__icon"
+                              ></div>
+                              <div class="wallet-service-item-list-point__text">
+                                Item 1
+                              </div>
+                            </div>
+                            <!-- item -->
+                            <div class="wallet-service-item-list__point">
+                              <div
+                                class="wallet-service-item-list-point__icon"
+                              ></div>
+                              <div class="wallet-service-item-list-point__text">
+                                Item 1
+                              </div>
+                            </div>
+                            <!-- item -->
+                            <div class="wallet-service-item-list__point">
+                              <div
+                                class="wallet-service-item-list-point__icon"
+                              ></div>
+                              <div class="wallet-service-item-list-point__text">
+                                Item 1
+                              </div>
+                            </div>
+                            <!-- item -->
+                            <div class="wallet-service-item-list__point">
+                              <div
+                                class="wallet-service-item-list-point__icon"
+                              ></div>
+                              <div class="wallet-service-item-list-point__text">
+                                Item 1
+                              </div>
+                            </div>
+                          </div>
+                          <div class="wallet-service-item__price">
+                            <span>$14</span>/month
+                          </div>
+                          <div class="wallet-service-item__btn">
+                            <span>Choose</span>
+                          </div>
+                        </div>
+                        <!-- item -->
+                        <div class="wallet-service__item">
+                          <div class="wallet-service-item__title">Pro</div>
+                          <div class="wallet-service-item__list">
+                            <!-- item -->
+                            <div class="wallet-service-item-list__point">
+                              <div
+                                class="wallet-service-item-list-point__icon"
+                              ></div>
+                              <div class="wallet-service-item-list-point__text">
+                                Item 1
+                              </div>
+                            </div>
+                            <!-- item -->
+                            <div class="wallet-service-item-list__point">
+                              <div
+                                class="wallet-service-item-list-point__icon"
+                              ></div>
+                              <div class="wallet-service-item-list-point__text">
+                                Item 1
+                              </div>
+                            </div>
+                            <!-- item -->
+                            <div class="wallet-service-item-list__point">
+                              <div
+                                class="wallet-service-item-list-point__icon"
+                              ></div>
+                              <div class="wallet-service-item-list-point__text">
+                                Item 1
+                              </div>
+                            </div>
+                            <!-- item -->
+                            <div class="wallet-service-item-list__point">
+                              <div
+                                class="wallet-service-item-list-point__icon"
+                              ></div>
+                              <div class="wallet-service-item-list-point__text">
+                                Item 1
+                              </div>
+                            </div>
+                            <!-- item -->
+                            <div class="wallet-service-item-list__point">
+                              <div
+                                class="wallet-service-item-list-point__icon"
+                              ></div>
+                              <div class="wallet-service-item-list-point__text">
+                                Item 1
+                              </div>
+                            </div>
+                          </div>
+                          <div class="wallet-service-item__price">
+                            <span>$200</span>/month
+                          </div>
+                          <div class="wallet-service-item__btn">
+                            <span>Choose</span>
+                          </div>
+                        </div>
+                        <!-- item -->
+                        <div class="wallet-service__item">
+                          <div class="wallet-service-item__title">
+                            Interprice
+                          </div>
+                          <div class="wallet-service-item__list">
+                            <!-- item -->
+                            <div class="wallet-service-item-list__point">
+                              <div
+                                class="wallet-service-item-list-point__icon"
+                              ></div>
+                              <div class="wallet-service-item-list-point__text">
+                                Item 1
+                              </div>
+                            </div>
+                            <!-- item -->
+                            <div class="wallet-service-item-list__point">
+                              <div
+                                class="wallet-service-item-list-point__icon"
+                              ></div>
+                              <div class="wallet-service-item-list-point__text">
+                                Item 1
+                              </div>
+                            </div>
+                            <!-- item -->
+                            <div class="wallet-service-item-list__point">
+                              <div
+                                class="wallet-service-item-list-point__icon"
+                              ></div>
+                              <div class="wallet-service-item-list-point__text">
+                                Item 1
+                              </div>
+                            </div>
+                            <!-- item -->
+                            <div class="wallet-service-item-list__point">
+                              <div
+                                class="wallet-service-item-list-point__icon"
+                              ></div>
+                              <div class="wallet-service-item-list-point__text">
+                                Item 1
+                              </div>
+                            </div>
+                            <!-- item -->
+                            <div class="wallet-service-item-list__point">
+                              <div
+                                class="wallet-service-item-list-point__icon"
+                              ></div>
+                              <div class="wallet-service-item-list-point__text">
+                                Item 1
+                              </div>
+                            </div>
+                          </div>
+                          <div class="wallet-service-item__price">
+                            <span>$75</span>/month
+                          </div>
+                          <div class="wallet-service-item__btn">
+                            <span>Choose</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="pcri-profile__account pcri-back pcri-profile__account--top"
+                    >
+                      <div class="pcri-profile-personal__title">Buy vote</div>
+                      <div class="wallet-vote__choise">
+                        <div class="range-slider">
+                          <input
+                            type="range"
+                            min="0"
+                            max="3"
+                            value="0"
+                            id="slider"
+                          />
+                          <div class="slider-value" id="slider-value">500</div>
+                        </div>
+                        <div class="wallet-vote-choise__result">
+                          <div class="wallet-vote-choise-result__amount">
+                            <div class="wvcra__text">Цена</div>
+                            <div class="wvcra__price">$ <span>500</span></div>
+                          </div>
+                          <a href="#" class="wallet-vote-choise-result__btn"
+                            >Buy</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pcri-profile__account pcri-back">
+                      <div class="pcri-profile-personal__title">Banners</div>
+                      <div class="pcri-profile__account--box">
+                        <div class="wallet-select">
+                          <div class="wallet-select-top">
+                            <div class="wallet-select-top__text">240x100</div>
+                            <div class="wallet-select-top__angle">
+                              <img src="img/angle-down-popup.svg" alt="angle" />
+                            </div>
+                          </div>
+                          <div class="wallet-select-dropdown">
+                            <div class="wallet-select-dropdown-item">
+                              240x100
+                            </div>
+                            <div class="wallet-select-dropdown-item">
+                              240x100x
+                            </div>
+                            <div class="wallet-select-dropdown-item">
+                              240x100s
+                            </div>
+                          </div>
+                        </div>
+                        <div class="wallet-select">
+                          <div class="wallet-select-top">
+                            <div class="wallet-select-top__text">Mu Online</div>
+                            <div class="wallet-select-top__angle">
+                              <img src="img/angle-down-popup.svg" alt="angle" />
+                            </div>
+                          </div>
+                          <div class="wallet-select-dropdown">
+                            <div class="wallet-select-dropdown-item">
+                              Mu Online
+                            </div>
+                            <div class="wallet-select-dropdown-item">
+                              Mu Online1
+                            </div>
+                            <div class="wallet-select-dropdown-item">
+                              Mu Online2
+                            </div>
+                          </div>
+                        </div>
+                        <div class="wallet-select">
+                          <div class="wallet-select-top">
+                            <div class="wallet-select-top__text">7 days</div>
+                            <div class="wallet-select-top__angle">
+                              <img src="img/angle-down-popup.svg" alt="angle" />
+                            </div>
+                          </div>
+                          <div class="wallet-select-dropdown">
+                            <div class="wallet-select-dropdown-item">
+                              7 days
+                            </div>
+                            <div class="wallet-select-dropdown-item">
+                              7 days2
+                            </div>
+                            <div class="wallet-select-dropdown-item">
+                              7 days3
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="wallet-vote-choise__result">
+                        <div class="wallet-vote-choise-result__amount">
+                          <div class="wvcra__text">Цена</div>
+                          <div class="wvcra__price">$ <span>500</span></div>
+                        </div>
+                        <a href="#" class="wallet-vote-choise-result__btn"
+                          >Buy</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- jquery -->
+    <!-- scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery-countdown.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <!-- styles -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="popups">
+      <div class="popup popup-security active">
+        <div class="popup__back"></div>
+        <div class="popup-content">
+          <div class="popup-close">
+            <img src="img/popup-close.svg" alt="close" />
+          </div>
+          <div class="popup__title">Reset password</div>
+          <form action="#" method="#">
+            <div class="popup-form__top">
+              <input
+                type="text"
+                class="popup-field"
+                name="password"
+                placeholder="Password"
+              /><input
+                type="text"
+                class="popup-field"
+                name="new-pass"
+                placeholder="New password"
+              /><input
+                type="text"
+                class="popup-field"
+                name="pass-confirm"
+                placeholder="Confirm new password"
+              />
+            </div>
+            <button class="popup-save">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="container-big">
+        <div class="header__wrapper d-flex">
+          <!-- left -->
+          <div class="header__left d-flex">
+            <a href="#" class="header-left__logo">
+              <span class="text-gradient">MMO</span>ANONS
+            </a>
+            <div class="header-left__theme d-flex">
+              <div class="header-left-theme__light"></div>
+              <div class="header-left-theme__dark"></div>
+            </div>
+            <nav class="header__nav">
+              <ul class="d-flex">
+                <li><a href="#">Реклама</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- right -->
+          <div class="header__right">
+            <a
+              href="#"
+              class="header-right__item header-right-item-help d-flex"
+            >
+              <div class="header-right-item-help__icon"></div>
+              <div class="header-right-item-help__text">Помощь</div>
+            </a>
+            <div class="header-right__item header-right__item--lang">
+              <div class="header-right-item__top">RU</div>
+              <div class="header-right-item__dropdown">
+                <!-- item -->
+                <div class="header-right-item-dropdown__item">EN</div>
+                <!-- item -->
+                <div class="header-right-item-dropdown__item">EN</div>
+              </div>
+            </div>
+            <div class="header-right__item header-right__item--username">
+              <div class="header-right__item--username__top d-flex">
+                <div class="header-right__item--username-icon">
+                  <img src="img/avatar.png" alt="avatar" />
+                </div>
+                <div class="header-right__item--username-name">Username</div>
+                <div class="header-right__item--username-angle"></div>
+              </div>
+
+              <div class="header-right-item-username__dropdown">
+                <div class="header-right-item-username-d__item">Профиль</div>
+                <div class="header-right-item-username-d__item">Профиль</div>
+                <div class="header-right-item-username-d__item">Профиль</div>
+              </div>
+            </div>
+            <a href="#" class="header-right-item__server d-flex">
+              <div class="header-right-item-server__icon"></div>
+              <div class="header-right-item-server__text">Добавить сервер</div>
+            </a>
+          </div>
+          <div class="header__burger d-flex">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="profile">
+      <div class="container">
+        <div class="profile__wrapper">
+          <div class="profile-wrapper-box">
+            <h1 class="profile-title">Account</h1>
+            <div class="profile-content d-flex">
+              <div class="profile-content-left">
+                <div class="profile-content-left__nav">
+                  <div class="profile-content-left-nav__item">My Profile</div>
+                  <a href="#" class="profile-content-left-nav__item active"
+                    >Security</a
+                  >
+                  <a href="#" class="profile-content-left-nav__item"
+                    >Projects</a
+                  >
+                  <a href="#" class="profile-content-left-nav__item"
+                    >Advertising</a
+                  >
+                </div>
+                <div class="profile-content-left__delete">Delete Account</div>
+              </div>
+              <div class="profile-content-right">
+                <div class="profile-content-right__item">
+                  <div class="pcri-profile">
+                    <div class="pcri-title">Security</div>
+                    <!-- item -->
+                    <div class="pcri-profile__account pcri-back">
+                      <div class="pcri-profile-personal__title">Account</div>
+                      <div class="pcri-security-edit__box">
+                        <div class="pcri-security__edit d-flex">
+                          <div class="pcri-profile-personal__list-item">
+                            <div class="pcri-ppli__top">Phone</div>
+                            <div class="pcri-ppli__info">+7 (404) 43******</div>
+                          </div>
+                          <div
+                            class="pcri-profile-personal__list-item--edit d-flex"
+                          >
+                            <img src="img/pencil.svg" alt="pencil" />
+                            Edit
+                          </div>
+                        </div>
+                        <div class="pcri-security__edit d-flex">
+                          <div class="pcri-profile-personal__list-item">
+                            <div class="pcri-ppli__top">Email</div>
+                            <div class="pcri-ppli__info">
+                              mm******s@gmail.com
+                            </div>
+                          </div>
+                          <div
+                            class="pcri-profile-personal__list-item--edit d-flex"
+                          >
+                            <img src="img/pencil.svg" alt="pencil" />
+                            Edit
+                          </div>
+                        </div>
+                        <div class="pcri-security__edit d-flex">
+                          <div class="pcri-profile-personal__list-item">
+                            <div class="pcri-ppli__top">Password</div>
+                            <div class="pcri-ppli__info">
+                              Added on 02/24/2024
+                            </div>
+                          </div>
+                          <div
+                            class="pcri-profile-personal__list-item--edit d-flex"
+                          >
+                            <img src="img/pencil.svg" alt="pencil" />
+                            Edit
+                          </div>
+                        </div>
+                        <div class="pcri-security__edit d-flex">
+                          <div class="pcri-profile-personal__list-item">
+                            <div class="pcri-ppli__top">Authentication</div>
+                            <div class="pcri-ppli__info">
+                              Send the code by SMS
+                            </div>
+                          </div>
+                          <div class="pcri-securit-edit__switch active">
+                            <div
+                              class="pcri-securit-edit__switch--change"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pcri-profile__activity pcri-back">
+                      <div class="pcri-profile-personal__title">Activity</div>
+                      <div class="pcri-ppli__top">More than a week ago</div>
+                      <div class="pcri-profile__activity--list">
+                        <div class="pcri-profile__activity--list-item pcripali">
+                          <div class="pcripali__log">
+                            Log in to your account
+                          </div>
+                          <div class="pcripali__date">
+                            May 5 at 12:25 p.m., Russia
+                          </div>
+                        </div>
+                        <div class="pcri-profile__activity--list-item pcripali">
+                          <div class="pcripali__log">
+                            Log in to your account
+                          </div>
+                          <div class="pcripali__date">
+                            April 29 at 12:25 p.m., Russia
+                          </div>
+                        </div>
+                        <div class="pcri-profile__activity--list-item pcripali">
+                          <div class="pcripali__log">
+                            Log in to your account
+                          </div>
+                          <div class="pcripali__date">
+                            April 29 at 12:25 p.m., Russia
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- jquery -->
+    <!-- scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery-countdown.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
