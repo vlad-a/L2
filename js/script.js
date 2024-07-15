@@ -15,7 +15,7 @@ $(document).ready(function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    speed: 300,
+    speed: 600,
     breakpoints: {
       1200: {
         spaceBetween: 30, // Отступ 15 пикселей
