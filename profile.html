@@ -4,7 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/page.html" />
+    <meta property="og:title" content="Content Title" />
+    <meta property="og:image" content="./images/sclbnr.jpg" />
+    <meta property="og:description" content="Description Here" />
+    <meta property="og:site_name" content="Site Name" />
+    <meta property="og:locale" content="en_US" />
+    <!-- Next tags are optional but recommended -->
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <title>MMOANONS</title>
     <!-- styles -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -26,18 +37,11 @@
                 name="username"
                 placeholder="Username"
               />
-              <div class="popup__dropdown">
-                <div class="popup-dropdown__main">
-                  <div class="popup-dropdown-main__country">Russia</div>
-                  <div class="popup-dropdown-main__angle">
-                    <img src="img/angle-down-popup.svg" alt="angle" />
-                  </div>
-                </div>
-                <div class="popup-dropdown__choise">
-                  <div class="popup-dropdown-choise__item">English</div>
-                  <div class="popup-dropdown-choise__item">Spanish</div>
-                </div>
-              </div>
+              <select id="custom-select-lang" class="custom-select">
+                <option value="0">Russia</option>
+                <option value="1">Russia 1</option>
+                <option value="2">Russia 2</option>
+              </select>
             </div>
             <button class="popup-save">Save</button>
           </form>
@@ -180,6 +184,8 @@
     <script src="js/jquery.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery-countdown.js"></script>
+    <script src="js/selectize.min.js"></script>
+    <script src="js/swiper.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

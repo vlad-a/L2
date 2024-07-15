@@ -1,4 +1,37 @@
 $(document).ready(function () {
+  var mySwiper = new Swiper(".preview__slider", {
+    // Опции Swiper
+    loop: true,
+    centeredSlides: true,
+    spaceBetween: 30, // Отступ по умолчанию
+    slidesPerView: 1,
+    loopAdditionalSlides: 1,
+    slidesPerColumn: 1,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    speed: 300,
+    breakpoints: {
+      1200: {
+        spaceBetween: 30, // Отступ 15 пикселей
+      },
+      992: {
+        spaceBetween: 25, // Отступ 15 пикселей
+      },
+      768: {
+        spaceBetween: 20, // Отступ 15 пикселей
+      },
+      0: {
+        spaceBetween: 15, // Отступ 15 пикселей
+      },
+    },
+  });
+  $(".custom-select").selectize();
   $(".moreless-button").click(function () {
     $(".moretext").slideToggle();
     if ($(".moreless-button").text() == "Read more") {
@@ -19,14 +52,6 @@ $(document).ready(function () {
     .addClass("active");
   var endDate = new Date("2024-07-13T23:59:59").getTime();
 
-  $(".preview__slider").owlCarousel({
-    loop: true,
-    center: true,
-    items: 1,
-    dots: true,
-    nav: true,
-    smartSpeed: 300,
-  });
   // Обработчик клика на кнопку "Read more"
   $(document).on("click", ".moreless-button", function (e) {
     e.preventDefault();
@@ -183,7 +208,18 @@ $(document).ready(function () {
       event.stopPropagation();
     }
   });
+  if ($(window).width() < 992) {
+    var headerHeight = $(".header").height();
 
+    // Получаем высоту элемента .header__nav
+    var headerNavHeight = $(".header__nav").height();
+
+    // Рассчитываем значение отступа
+    var totalHeight = headerHeight + headerNavHeight;
+
+    // Устанавливаем значение отступа для .header__right
+    $(".header__right").css("top", totalHeight + "px");
+  }
   $(document).on("click", function (event) {
     if ($(window).width() < 992) {
       if (!$(event.target).closest(".header-right__item").length) {

@@ -4,8 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/page.html" />
+    <meta property="og:title" content="Content Title" />
+    <meta property="og:image" content="./images/sclbnr.jpg" />
+    <meta property="og:description" content="Description Here" />
+    <meta property="og:site_name" content="Site Name" />
+    <meta property="og:locale" content="en_US" />
+    <!-- Next tags are optional but recommended -->
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <title>MMOANONS</title>
     <!-- styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css"
+      integrity="sha512-pTaEn+6gF1IeWv3W1+7X7eM60TFu/agjgoHmYhAfLEU8Phuf6JKiiE8YmsNC0aCgQv4192s4Vai8YZ6VNM6vyQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -20,24 +38,12 @@
           <div class="popup__title">Replenish</div>
           <form action="#" method="#">
             <div class="popup-form__top">
-              <div class="popup__dropdown">
-                <div class="popup-dropdown__main">
-                  <div class="popup-dropdown-main__country">
-                    PayPal (Commission 5%)
-                  </div>
-                  <div class="popup-dropdown-main__angle">
-                    <img src="img/angle-down-popup.svg" alt="angle" />
-                  </div>
-                </div>
-                <div class="popup-dropdown__choise">
-                  <div class="popup-dropdown-choise__item">
-                    PayPal (Commission 15%)
-                  </div>
-                  <div class="popup-dropdown-choise__item">
-                    PayPal (Commission 215%)
-                  </div>
-                </div>
-              </div>
+              <select id="custom-select" class="custom-select">
+                <option value="0">PayPal (Commission 5%)</option>
+                <option value="1">PayPal (Commission 15%)</option>
+                <option value="2">PayPal (Commission 25%)</option>
+              </select>
+
               <input
                 type="text"
                 class="popup-field"
@@ -459,6 +465,8 @@
     <script src="js/jquery.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery-countdown.js"></script>
+    <script src="js/selectize.min.js"></script>
+    <script src="js/swiper.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
