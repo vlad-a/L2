@@ -1552,8 +1552,10 @@ input:focus ~ .servers-top__icon::after {
   box-sizing: border-box;
   align-items: center;
 }
-.swiper-slide-active .preview-slider-item__inner {
+.swiper-slide-active .preview-slider-item__inner,
+.swiper-slide-duplicate-active .preview-slider-item__inner {
   height: 100%;
+  transition: 500ms ease all;
 }
 .preview-slider__item {
   display: flex;
