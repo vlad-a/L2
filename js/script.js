@@ -1,4 +1,110 @@
 $(document).ready(function () {
+  class gw_timeUpdate {
+    constructor(el, date, startIn, lifeTime, tz) {
+      this.el = el;
+      this.startTime = luxon.DateTime.fromSQL(date, { zone: tz });
+      this.tz = tz;
+      this.startIn = startIn || "Start in";
+      this.lifeTime = lifeTime || "Life time";
+    }
+
+    update() {
+      let dateNow = luxon.DateTime.now().setZone(this.tz);
+      let comming = this.startTime < dateNow;
+
+      let obj = this.startTime
+        .diff(dateNow, ["days", "hours", "minutes", "seconds"])
+        .toObject();
+      let days = Math.abs(Math.floor(obj.days));
+      let hours = Math.abs(Math.floor(obj.hours));
+      let minutes = Math.abs(Math.floor(obj.minutes));
+      let seconds = Math.abs(Math.floor(obj.seconds));
+      let title = comming ? this.lifeTime : this.startIn;
+
+      let html = `
+        <div class="countdown">
+            <div class="countdown__heading">
+                <div class="countdown__title">${title}</div>
+            </div>
+            <div class="countdown__counter">
+                <div class="gw-timer">
+                    <div class="gw-timer__item">
+                        <div class="gw-timer__amount">${days}</div>
+                        <div class="gw-timer__desc">${numDecline(
+                          days,
+                          __config.timer.dd[0]
+                        )}</div>
+                    </div>
+										<div class="gw-timer-dot">:</div>
+                    <div class="gw-timer__item">
+                        <div class="gw-timer__amount">${String(hours).padStart(
+                          2,
+                          "0"
+                        )}</div>
+                        <div class="gw-timer__desc">${numDecline(
+                          hours,
+                          __config.timer.dd[1]
+                        )}</div>
+                    </div>
+										<div class="gw-timer-dot">:</div>
+                    <div class="gw-timer__item">
+                        <div class="gw-timer__amount">${String(
+                          minutes
+                        ).padStart(2, "0")}</div>
+                        <div class="gw-timer__desc">${numDecline(
+                          minutes,
+                          __config.timer.dd[2]
+                        )}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+      this.el.html(html);
+    }
+  }
+
+  function numDecline(n, titles) {
+    return titles[
+      1 === n % 10 && 11 !== n % 100
+        ? 0
+        : 2 <= n % 10 && 4 >= n % 10 && (10 > n % 100 || 20 <= n % 100)
+        ? 1
+        : 2
+    ];
+  }
+
+  const __config = {
+    timer: {
+      dd: [
+        ["день", "дня", "дней"],
+        ["час", "часа", "часов"],
+        ["минута", "минуты", "минут"],
+        ["секунда", "секунды", "секунд"],
+      ],
+    },
+  };
+
+  console.log("DOM fully loaded and parsed");
+  $("[data-timer-start-time]").each(function (index, element) {
+    const __this = $(this);
+    console.log("Initializing timer for element:", __this);
+    let timeREnder = new gw_timeUpdate(
+      __this,
+      __this.attr("data-timer-start-time"),
+      __this.attr("data-timer-before"),
+      __this.attr("data-timer-after"),
+      __this.attr("data-timer-time-zone")
+    );
+    let update = function () {
+      timeREnder.update();
+      setTimeout(() => {
+        update();
+      }, 1000);
+    };
+    update();
+  });
+
   var mySwiper = new Swiper(".preview__slider", {
     // Опции Swiper
     loop: true,
@@ -50,7 +156,6 @@ $(document).ready(function () {
     })
     .eq(0)
     .addClass("active");
-  var endDate = new Date("2024-07-13T23:59:59").getTime();
 
   // Обработчик клика на кнопку "Read more"
   $(document).on("click", ".moreless-button", function (e) {
@@ -155,7 +260,7 @@ $(document).ready(function () {
   const values = [500, 1500, 2000, 4000];
   const slider = $("#slider");
   const sliderValue = $("#slider-value");
-  const priceSpan = $(".wvcra__price span");
+  const priceSpan = $(".pcri-profile__account--vote .wvcra__price span");
 
   if (slider.length && sliderValue.length && priceSpan.length) {
     slider.on("input", function () {
@@ -324,14 +429,4 @@ $(document).ready(function () {
       $(this).addClass("active");
     }
   });
-  if ($("#countdown").length) {
-    $("#countdown").countdown(endDate, function (event) {
-      $(this).find(".days").html(event.strftime("%D"));
-      $(this).find(".days-label").html(" дня ");
-      $(this).find(".hours").html(event.strftime("%H"));
-      $(this).find(".hours-label").html(" часа ");
-      $(this).find(".minutes").html(event.strftime("%M"));
-      $(this).find(".minutes-label").html(" минут");
-    });
-  }
 });

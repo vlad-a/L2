@@ -876,20 +876,17 @@ h6 {
   flex: 0 0 auto;
 }
 .servers-top__version {
-  align-items: center;
-  gap: 33px;
-  border: 1px solid #242630;
-  border-radius: 12px;
   height: 48px;
-  padding: 0 16px;
+  width: 240px;
   color: #75798b;
   font-size: 16px;
   flex: 0 0 auto;
   transition: 250ms ease all;
   cursor: pointer;
 }
-.servers-top__version:hover {
-  color: #fff;
+.servers-top__version .custom-select {
+  width: 100%;
+  line-height: 1.2;
 }
 .servers-top-version__angle {
   width: 14px;
@@ -923,15 +920,7 @@ h6 {
 .servers-top__version.active .servers-top-version__angle {
   transform: rotate(180deg);
 }
-.servers-top__version:hover {
-  background: #242630;
-}
-.servers-top__version:hover .servers-top-version__angle::after {
-  opacity: 0;
-}
-.servers-top__version:hover .servers-top-version__angle::before {
-  opacity: 1;
-}
+
 .servers-top__right {
   width: -webkit-fill-available;
 }
@@ -1663,11 +1652,11 @@ input:focus ~ .servers-top__icon::after {
   padding: 27px 46px;
   border-radius: 12px;
 }
-.server-big__right--text {
+.countdown__title {
   color: #75798b;
   font-size: 12px;
   line-height: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 }
 .server-big__wrapper {
   position: relative;
@@ -2674,17 +2663,52 @@ input:focus ~ .servers-top__icon::after {
   position: relative;
 }
 .rating-list-box-item__inner {
-  width: -webkit-fill-available;
+  flex-grow: 1;
+  min-width: 0;
 }
 .rlbii__pic img {
   width: 100%;
   height: 100%;
   box-sizing: content-box;
 }
+.gw-timer {
+  display: flex;
+  color: #fff;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
+}
 .rlbii-top-right__liked {
   background: #e84f18;
   line-height: 1;
   color: #fff;
+}
+.gw-timer__desc {
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+}
+.gw-timer__amount {
+  text-align: center;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.gw-timer__item {
+  position: relative;
+}
+.gw-timer__item:last-child {
+  margin: 0;
+}
+.gw-timer-dot {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.gw-timer__item:last-child:after {
+  display: none;
 }
 .selectize-control.single .selectize-input {
   border: 1px solid rgb(255 255 255 / 10%);
@@ -2731,6 +2755,7 @@ input:focus ~ .servers-top__icon::after {
   background: rgb(232 86 24 / 20%);
   width: 32px;
   border-radius: 4px;
+  flex-shrink: 0;
   height: 48px;
   display: flex;
   justify-content: center;
@@ -2807,7 +2832,7 @@ input:focus ~ .servers-top__icon::after {
   text-align: right;
 }
 .rating-info__top {
-  width: -webkit-fill-available;
+  width: 100%;
 }
 .rating-info__top .rating-list-box__item {
   background: transparent;
@@ -2871,6 +2896,7 @@ input:focus ~ .servers-top__icon::after {
   align-items: center;
   color: #75798b;
   gap: 12px;
+  width: fit-content;
   font-size: 16px;
   transition: 250ms ease all;
   font-weight: 500;
@@ -3314,6 +3340,7 @@ input:focus ~ .servers-top__icon::after {
   border-radius: 100px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .popup-file input {
   font-size: 0;
   width: 100%;
@@ -4004,9 +4031,7 @@ a.acli-wrap-list__more {
     margin-top: 18px;
     margin-bottom: 22px;
   }
-  .countdown {
-    padding: 23px 42px;
-  }
+
   .servers__top {
     gap: 120px;
   }
@@ -4290,9 +4315,7 @@ a.acli-wrap-list__more {
   .countdown-item-settings span {
     font-size: 29px;
   }
-  .countdown {
-    padding: 20px 40px;
-  }
+
   .server-big__wrapper {
     height: 200px;
   }
@@ -4613,6 +4636,9 @@ a.acli-wrap-list__more {
   }
   .preview__slider {
     width: 700px;
+  }
+  .gw-timer__amount {
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -5123,6 +5149,9 @@ a.acli-wrap-list__more {
   .pcri-back {
     padding: 18px;
   }
+  .countdown__title {
+    text-align: center;
+  }
   .pcri-profile-photo__img {
     width: 50px;
     height: 50px;
@@ -5411,5 +5440,8 @@ a.acli-wrap-list__more {
   }
   .header__nav ul li a {
     height: 45px;
+  }
+  .servers-top__version .selectize-control.single .selectize-input {
+    height: 100%;
   }
 }

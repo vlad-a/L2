@@ -17,6 +17,8 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <title>MMOANONS</title>
     <!-- styles -->
+    <script src="js/luxon.js"></script>
+    <link rel="stylesheet" href="css/swiper-styles.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -120,8 +122,11 @@
                 <div class="servers-top__icon"></div>
               </div>
               <div class="servers-top__version d-flex">
-                <div class="servers-top-version__text">Версия игры любая</div>
-                <div class="servers-top-version__angle"></div>
+                <select id="custom-select" class="custom-select">
+                  <option value="0">Версия игры любая</option>
+                  <option value="1">Версия игры v1.1</option>
+                  <option value="2">Версия игры v1.2</option>
+                </select>
               </div>
               <div class="servers-top__filter d-flex">
                 <div class="servers-top-filter__icon"></div>
@@ -945,11 +950,7 @@
         </div>
       </div>
     </footer>
-    <!-- jquery -->
-    <!-- scripts -->
     <script src="js/jquery.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery-countdown.js"></script>
     <script src="js/selectize.min.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/script.js"></script>

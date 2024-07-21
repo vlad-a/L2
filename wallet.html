@@ -17,13 +17,8 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <title>MMOANONS</title>
     <!-- styles -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css"
-      integrity="sha512-pTaEn+6gF1IeWv3W1+7X7eM60TFu/agjgoHmYhAfLEU8Phuf6JKiiE8YmsNC0aCgQv4192s4Vai8YZ6VNM6vyQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <script src="js/luxon.js"></script>
+    <link rel="stylesheet" href="css/swiper-styles.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -354,8 +349,10 @@
                         </div>
                       </div>
                     </div>
-                    <div
-                      class="pcri-profile__account pcri-back pcri-profile__account--top"
+                    <form
+                      action="#"
+                      method="#"
+                      class="pcri-profile__account pcri-back pcri-profile__account--top pcri-profile__account--vote"
                     >
                       <div class="pcri-profile-personal__title">Buy vote</div>
                       <div class="wallet-vote__choise">
@@ -374,84 +371,55 @@
                             <div class="wvcra__text">Цена</div>
                             <div class="wvcra__price">$ <span>500</span></div>
                           </div>
-                          <a href="#" class="wallet-vote-choise-result__btn"
-                            >Buy</a
+                          <input type="hidden" name="price" value="" />
+                          <button
+                            type="submit"
+                            href="#"
+                            class="wallet-vote-choise-result__btn"
                           >
+                            Buy
+                          </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="pcri-profile__account pcri-back">
+                    </form>
+                    <form
+                      action="#"
+                      method="#"
+                      class="pcri-profile__account pcri-back"
+                    >
                       <div class="pcri-profile-personal__title">Banners</div>
                       <div class="pcri-profile__account--box">
-                        <div class="wallet-select">
-                          <div class="wallet-select-top">
-                            <div class="wallet-select-top__text">240x100</div>
-                            <div class="wallet-select-top__angle">
-                              <img src="img/angle-down-popup.svg" alt="angle" />
-                            </div>
-                          </div>
-                          <div class="wallet-select-dropdown">
-                            <div class="wallet-select-dropdown-item">
-                              240x100
-                            </div>
-                            <div class="wallet-select-dropdown-item">
-                              240x100x
-                            </div>
-                            <div class="wallet-select-dropdown-item">
-                              240x100s
-                            </div>
-                          </div>
-                        </div>
-                        <div class="wallet-select">
-                          <div class="wallet-select-top">
-                            <div class="wallet-select-top__text">Mu Online</div>
-                            <div class="wallet-select-top__angle">
-                              <img src="img/angle-down-popup.svg" alt="angle" />
-                            </div>
-                          </div>
-                          <div class="wallet-select-dropdown">
-                            <div class="wallet-select-dropdown-item">
-                              Mu Online
-                            </div>
-                            <div class="wallet-select-dropdown-item">
-                              Mu Online1
-                            </div>
-                            <div class="wallet-select-dropdown-item">
-                              Mu Online2
-                            </div>
-                          </div>
-                        </div>
-                        <div class="wallet-select">
-                          <div class="wallet-select-top">
-                            <div class="wallet-select-top__text">7 days</div>
-                            <div class="wallet-select-top__angle">
-                              <img src="img/angle-down-popup.svg" alt="angle" />
-                            </div>
-                          </div>
-                          <div class="wallet-select-dropdown">
-                            <div class="wallet-select-dropdown-item">
-                              7 days
-                            </div>
-                            <div class="wallet-select-dropdown-item">
-                              7 days2
-                            </div>
-                            <div class="wallet-select-dropdown-item">
-                              7 days3
-                            </div>
-                          </div>
-                        </div>
+                        <select id="custom-select" class="custom-select">
+                          <option value="0">240x100</option>
+                          <option value="1">240x1001</option>
+                          <option value="2">240x1002</option>
+                        </select>
+                        <select id="custom-select" class="custom-select">
+                          <option value="0">Mu Online</option>
+                          <option value="1">Mu Online1</option>
+                          <option value="2">Mu Online2</option>
+                        </select>
+                        <select id="custom-select" class="custom-select">
+                          <option value="0">7 days</option>
+                          <option value="1">7 days1</option>
+                          <option value="2">7 days2</option>
+                        </select>
                       </div>
 
                       <div class="wallet-vote-choise__result">
                         <div class="wallet-vote-choise-result__amount">
                           <div class="wvcra__text">Цена</div>
-                          <div class="wvcra__price">$ <span>500</span></div>
+                          <div class="wvcra__price">$ <span>1500</span></div>
                         </div>
-                        <a href="#" class="wallet-vote-choise-result__btn"
-                          >Buy</a
+                        <button
+                          type="submit"
+                          href="#"
+                          class="wallet-vote-choise-result__btn"
                         >
+                          Buy
+                        </button>
                       </div>
-                    </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -460,11 +428,7 @@
         </div>
       </div>
     </section>
-    <!-- jquery -->
-    <!-- scripts -->
     <script src="js/jquery.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery-countdown.js"></script>
     <script src="js/selectize.min.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/script.js"></script>
